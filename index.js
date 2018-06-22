@@ -27,16 +27,10 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   let element = document.getElementById('grand-node') // find the element with an id of #grand-node
-  let firstBorn = element.children[0] // find the first item within grand node
+  let child = element.querySelectorAll('div') // find the items within grand node
 
-  while (firstBorn) { // when another child still exists
-    element = firstBorn // make the thing we're parsing through the child
-    firstBorn = element.children[0]
-  }
-
-  return element
+  return child[3] // return the final div in the array
 }
-
 
 
 
